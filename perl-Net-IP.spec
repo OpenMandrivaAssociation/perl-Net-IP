@@ -15,6 +15,7 @@ Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides functions to deal with IPv4/IPv6 addresses.

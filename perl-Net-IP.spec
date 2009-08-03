@@ -1,21 +1,21 @@
-%define module	Net-IP
-%define name	perl-%{module}
-%define version	1.25
-%define release	%mkrel 4
+%define upstream_name	 Net-IP
+%define upstream_version 1.25
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl extension for manipulating IPv4/IPv6 addresses
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides functions to deal with IPv4/IPv6 addresses.
@@ -26,7 +26,7 @@ functions. Most subroutines can take either IPv4 or IPv6 addresses
 transparently.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,5 +48,3 @@ rm -rf %{buildroot}
 %{_bindir}/*
 %{perl_vendorlib}/Net
 %{_mandir}/*/*
-
-

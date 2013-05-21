@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    6
+Release:    7
 
 Summary:	Perl extension for manipulating IPv4/IPv6 addresses
 License:	GPL+ or Artistic

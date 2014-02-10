@@ -1,2 +1,4 @@
+removed_sources:
+  Net-IP-1.25.tar.bz2: 08267849ee1622bd531b72f2bd98afce69660fed
 sources:
-  "Net-IP-1.25.tar.bz2": 08267849ee1622bd531b72f2bd98afce69660fed
+  Net-IP-1.26.tar.gz: 601204ad91c6b493085817e870cbfe82c50a12be

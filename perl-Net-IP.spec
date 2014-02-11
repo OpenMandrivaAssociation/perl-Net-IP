@@ -1,14 +1,14 @@
 %define modname	Net-IP
-%define modver	1.25
+%define modver 1.26
 
 Summary:	Perl extension for manipulating IPv4/IPv6 addresses
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-IP-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -38,4 +38,5 @@ transparently.
 %{_bindir}/*
 %{perl_vendorlib}/Net
 %{_mandir}/man3/*
+
 

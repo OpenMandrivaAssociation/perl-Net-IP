@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Net/Net-IP-%{modver}.tar.gz
 BuildArch:	noarch
+BuildRequires:	perl(Math::BigInt)
 BuildRequires:	perl-devel
 
 %description
